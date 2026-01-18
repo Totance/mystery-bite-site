@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Bite - 开启味蕾的未知之旅</title>
+    <!-- 引入 Google Fonts: Caveat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'zen-bg': '#fdfbf7', // 宣纸白
+                        'zen-ink': '#2c2c2c', // 墨色
+                        'zen-stone': '#8c8c8c', // 石色
+                        'zen-accent': '#a84632', // 印泥红（点缀用）
+                    },
+                    fontFamily: {
+                        sans: ['Helvetica Neue', 'Arial', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+                        handwriting: ['Caveat', 'cursive'], // 新增手写字体
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 简单的淡入动画 */
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-zen-bg text-zen-ink min-h-screen flex flex-col items-center justify-center p-6 selection:bg-zen-ink selection:text-zen-bg">
+
+    <!-- 主容器 -->
+    <main class="max-w-md w-full text-center space-y-10 fade-in">
+        
+        <!-- Logo 区域 -->
+        <div class="flex justify-center mb-8">
+            <div class="w-48 md:w-64">
+                <!-- 这里的 Logo 路径对应刚才复制的文件 -->
+                <img src="images/logo.png" alt="Mystery Bite Logo" class="w-full h-auto object-contain transform hover:scale-105 transition duration-700 ease-out">
+            </div>
+        </div>
+
+        <!-- 应用名称 -->
+        <h1 class="text-5xl md:text-6xl font-handwriting font-bold tracking-wide text-zen-ink">
+            Mystery Bite
+        </h1>
+
+        <!-- 品牌故事 -->
+        <div class="space-y-6">
+            <h2 class="text-sm font-medium text-zen-accent tracking-widest uppercase opacity-80">A Bridge Built with Recipes and Curiosity</h2>
+            
+            <div class="text-xs md:text-sm leading-relaxed text-zen-ink/80 font-light px-2 space-y-4 text-justify">
+                <p>
+                    It all started in early 2025. You might remember that unique moment in internet history—the "Digital Migration." As the future of TikTok in the US felt uncertain, thousands of "TikTok refugees" found a new home on Xiaohongshu.
+                </p>
+                <p>
+                    What happened next was magical. Across language barriers and time zones, people began "paying cat taxes," "cross-checking bank statements," and most importantly, exchanging secret recipes. In those comment sections, we found more than just food; we found pure, raw human connection and a childlike joy in discovering the unknown.
+                </p>
+                <p class="text-center font-normal italic text-zen-ink/90">
+                    Mystery Bite was born from that spirit of exchange.
+                </p>
+                <p>
+                    I am a designer by trade and a food lover at heart, but I had never written a line of code in my life. Inspired by that wave of cultural curiosity and empowered by the dawn of AI, I decided to build a bridge. I wanted to capture the thrill of that "blind box" discovery—where you might find a comforting bowl of General Tso’s Chicken or a "brave" challenge like Century Egg.
+                </p>
+                <p>
+                    This is my first app. It is a labor of love, crafted with the help of AI and a passion for my culture. It might have a few rough edges, and I ask for your patience as I learn and grow with you. My only hope is that through these digital cards, you find a taste of the same joy we all felt during that unforgettable spring of 2025.
+                </p>
+            </div>
+        </div>
+
+        <!-- 按钮区域 -->
+        <div class="flex flex-col space-y-4 pt-4 px-8">
+            <a href="legal.html#privacy" class="group relative px-6 py-3 border border-zen-ink text-zen-ink hover:bg-zen-ink hover:text-zen-bg transition-all duration-300 ease-out overflow-hidden">
+                <span class="absolute w-0 h-full bg-zen-ink left-0 top-0 transition-all duration-300 group-hover:w-full -z-10"></span>
+                <span class="relative tracking-widest text-sm font-medium">Privacy Policy</span>
+            </a>
+            <a href="legal.html#terms" class="group relative px-6 py-3 border border-zen-ink text-zen-ink hover:bg-zen-ink hover:text-zen-bg transition-all duration-300 ease-out overflow-hidden">
+                <span class="absolute w-0 h-full bg-zen-ink left-0 top-0 transition-all duration-300 group-hover:w-full -z-10"></span>
+                <span class="relative tracking-widest text-sm font-medium">Terms of Service</span>
+            </a>
+        </div>
+
+        <!-- 联系方式 -->
+        <footer class="pt-12">
+            <p class="text-xs text-zen-stone tracking-wider">
+                CONTACT US
+            </p>
+            <a href="mailto:Langyuetan@gmail.com" class="mt-2 block text-sm text-zen-ink hover:text-zen-accent transition-colors duration-300 border-b border-transparent hover:border-zen-accent inline-block pb-0.5">
+                Langyuetan@gmail.com
+            </a>
+            <p class="mt-8 text-[10px] text-zen-stone/60">
+                &copy; 2026 Mystery Bite. All rights reserved.
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

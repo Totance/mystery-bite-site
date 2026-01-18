@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloading Mystery Bite...</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'zen-bg': '#fdfbf7',
+                        'zen-ink': '#2c2c2c',
+                    },
+                }
+            }
+        }
+    </script>
+    <script>
+        function redirectStore() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            var iosLink = "#"; // 替换为真实的 App Store 链接
+            var androidLink = "#"; // 替换为真实的 Google Play 链接
+            var fallbackLink = "index.html"; // 无法识别时的回退页面
+
+            // iOS Detection
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                document.getElementById('status').innerText = "Redirecting to App Store...";
+                window.location.href = iosLink;
+            } 
+            // Android Detection
+            else if (/android/i.test(userAgent)) {
+                document.getElementById('status').innerText = "Redirecting to Google Play...";
+                window.location.href = androidLink;
+            }
+            // Others
+            else {
+                document.getElementById('status').innerText = "Please open this link on a mobile device.";
+                // 可选：如果是桌面端，可以保留在当前页或跳转回主页
+            }
+        }
+
+        window.onload = function() {
+            // 设置一个短暂的延迟，让用户看到加载动画，体验更平滑
+            setTimeout(redirectStore, 1000);
+        };
+    </script>
+</head>
+<body class="bg-zen-bg text-zen-ink h-screen flex flex-col items-center justify-center p-6 text-center">
+    
+    <div class="animate-pulse flex flex-col items-center">
+        <!-- 加载图标 (简单的旋转圆环) -->
+        <div class="w-12 h-12 border-4 border-zen-ink/20 border-t-zen-ink rounded-full animate-spin mb-6"></div>
+        
+        <h1 class="text-xl font-light tracking-widest uppercase mb-2">Mystery Bite</h1>
+        <p id="status" class="text-sm text-gray-500 font-light">Detecting your device...</p>
+    </div>
+
+    <div class="mt-12 space-y-4">
+        <p class="text-xs text-gray-400">Manual Download Links:</p>
+        <div class="flex gap-4 justify-center">
+            <a href="#" class="px-4 py-2 border border-gray-300 rounded text-xs hover:bg-gray-100 transition">App Store</a>
+            <a href="#" class="px-4 py-2 border border-gray-300 rounded text-xs hover:bg-gray-100 transition">Google Play</a>
+        </div>
+    </div>
+
+</body>
+</html>
